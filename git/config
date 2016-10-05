@@ -1,0 +1,4 @@
+[filter "keyword"]
+        smudge = "author=`git log --pretty=format:%ae -1`; last_date=`git log --pretty=format:\"%ai\" -1`; version=`echo $lastdate | cut -d \" \" -f 1-2 | sed -e \"s/[ -:]/./g\"`; sed -e \"s/[$]Revision[$]/\\$Revision: $last_date \\$/\"  -e \"s/[$]Date[$]/\\$Date: $last_date \\$/\"  -e \"s/[$]Author[$]/\\$Author: $author \\$/\"  "
+        clean = sed -r -e 's/([$]Revision|Date|Author)(:[^$]+ [$])/\\1$/'
+
