@@ -8,4 +8,7 @@ Currently, installation is rudimetary.
 1. Append (or create) the gitattributes file here to .gitattribute file at the root of your Git project
 1. Append (or create) the git/config file here to the .git/config file at the root of your Git project
 
-TODO: create an installation script
+```
+curl https://raw.githubusercontent.com/np-trivial/git-keyword-substitution/master/gitattributes >> .gitattributes
+curl https://raw.githubusercontent.com/np-trivial/git-keyword-substitution/master/git/config >> .git/config
+```
